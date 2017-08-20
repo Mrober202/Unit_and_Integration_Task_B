@@ -5,6 +5,9 @@ window.onload = function(){
   var updateView = function() {
     var runningTotal = document.querySelector('#running_total');
     runningTotal.value = calculator.runningTotal;
+    if(runningTotal.value === "Infinity") {
+      runningTotal.value = 0;
+    }
   };
 
   //bind number clicks to number buttons
